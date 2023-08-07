@@ -1,0 +1,15 @@
+.to-do-card-container {
+  display: flex;
+  justify-content: space-between;
+}
+.to-do-title {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #000000;
+}
+.btn {
+  background-color: transparent;
+  border: 1px solid orangered;
+  color: orangered;
+  text-align: center;
+}
