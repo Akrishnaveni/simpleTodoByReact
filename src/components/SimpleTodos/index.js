@@ -53,7 +53,7 @@ class SimpleTodos extends Component {
               <TodoItem
                 todoDetails={each}
                 key={each.id}
-                deleteTodo={deleteTodo}
+                deleteTodo={this.deleteTodo}
               />
             ))}
           </ul>
