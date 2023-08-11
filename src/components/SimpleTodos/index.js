@@ -1,7 +1,10 @@
 import './index.css'
-import TodoItem from '../TodoItem/index.js'
 
-const initialTodosList = [
+import {Component} from 'react'
+
+import TodoItem from '../TodoItem'
+
+const initialDodosList = [
   {
     id: 1,
     title: 'Book the ticket for today evening',
@@ -34,7 +37,7 @@ const initialTodosList = [
 ]
 
 class SimpleTodos extends Component {
-  state = {TodoList: initialTodosList}
+  state = {TodoList: initialDodosList}
 
   deleteTodo = id => {
     const {TodoList} = this.state
