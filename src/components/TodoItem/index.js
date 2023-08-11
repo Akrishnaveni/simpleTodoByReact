@@ -1,22 +1,27 @@
-import "./index.css"
+import './index.css'
+import {Component} from 'react'
 
-class TodoItem = props => {
-    const {todoDetails,deleteTodo}= props
-    const {id,title}=todoDetails
+class TodoItem extends Component {
+  onDelete = () => {
+    const {deleteTodo} = this.props
+    const {todoDetails} = this.props
+    const {id} = todoDetails
 
-    onDelete=()=>{
-        deleteTodo(id)
-    }
+    deleteTodo(id)
+  }
 
-    render(){
+  render() {
+    const {todoDetails} = this.props
+    const {title} = todoDetails
     return (
-        <li className="to-do-card-container">
-            <h1 className="todo-title">{title}</h1>
-            <button type="button" className="btn" onClick={onDelete}>Delete</button>
-        </li>
+      <li className="to-do-card-container">
+        <p className="todo-title">{title}</p>
+        <button type="button" className="btn" onClick={this.onDelete}>
+          Delete
+        </button>
+      </li>
     )
-    }
-
+  }
 }
 
 export default TodoItem
